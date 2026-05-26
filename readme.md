@@ -2,4 +2,4 @@
 
 ## API Server, 5 endpoints with `products`
 
-![cool-image](./cool.png)
+![cool-image](./cool2.png)
