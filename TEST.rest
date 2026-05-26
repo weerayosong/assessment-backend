@@ -1,0 +1,7 @@
+@baseUrl = http://localhost:3002
+
+### 1. GET All Products (req.query) ?name=undefined
+GET {{baseUrl}}/products
+
+### 1a. GET Product by name (req.query) ?name=light ,manda, jedi, etc.
+GET {{baseUrl}}/products?name=jedi

@@ -1,9 +1,13 @@
 import express from "express";
 
+import productRoutes from "./routes/product.route.js";
+
 const app = express();
 const PORT = process.env.PORT || 3002;
 
 app.use(express.json());
+
+app.use("/products", productRoutes);
 
 app.get("/", (req, res) => {
     res.send("May the force be with you");
