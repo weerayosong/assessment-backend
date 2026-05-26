@@ -30,32 +30,46 @@ export const getProductById = async (req, res, next) => {
 };
 
 // POST: /products
-export const createProduct = (req, res) => {
-    const { name, price, quantity } = req.body;
-    if (!name || !price)
-        return res.status(400).json({ message: "name and price are required" });
+export const createProduct = async (req, res, next) => {
+    try {
+        const { name, price, quantity } = req.body;
+        if (!name || !price)
+            return res
+                .status(400)
+                .json({ message: "Name and price are required" });
 
-    const newProduct = {
-        id: String(Date.now()),
-        name,
-        price: Number(price),
-        quantity: Number(quantity || 1),
-    };
+        const newProduct = {
+            id: String(Date.now()),
+            name,
+            price: Number(price),
+            quantity: Number(quantity || 1),
+        };
 
-    products.push(newProduct);
-    res.status(201).json({ message: "Product created", product: newProduct });
+        products.push(newProduct);
+        res.status(201).json({
+            message: "Product created",
+            product: newProduct,
+        });
+    } catch (err) {
+        next(err);
+    }
 };
 
 // PUT: /products/:id
-export const updateProduct = (req, res) => {
-    const product = products.find((p) => p.id === req.params.id);
-    if (!product) return res.status(404).json({ message: "Product not found" });
+export const updateProduct = async (req, res, next) => {
+    try {
+        const product = products.find((p) => p.id === req.params.id);
+        if (!product)
+            return res.status(404).json({ message: "Product not found" });
 
-    const { name, price, quantity } = req.body;
+        const { name, price, quantity } = req.body;
 
-    if (name) product.name = name;
-    if (price) product.price = Number(price);
-    if (quantity) product.quantity = Number(quantity);
+        if (name) product.name = name;
+        if (price) product.price = Number(price);
+        if (quantity) product.quantity = Number(quantity);
 
-    res.status(200).json({ message: "Product updated", product });
+        res.status(200).json({ message: "Product updated", product });
+    } catch (err) {
+        next(err);
+    }
 };
