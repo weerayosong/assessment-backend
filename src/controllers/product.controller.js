@@ -1,15 +1,17 @@
 import { products } from "../models/product.model.js";
 
-// GET: /products (all / by ?name=jedi)
-export const getProducts = (req, res) => {
-    const { name } = req.query;
+// GET: /products
+export const getProducts = async (req, res, next) => {
+    try {
+        const { name } = req.query;
+        const data = name
+            ? products.filter((p) =>
+                  p.name.toLowerCase().includes(name.toLowerCase()),
+              )
+            : products;
 
-    if (name) {
-        const filteredProducts = products.filter((p) =>
-            p.name.toLowerCase().includes(name.toLowerCase()),
-        );
-        return res.status(200).json(filteredProducts);
+        res.status(200).json(data);
+    } catch (err) {
+        next(err);
     }
-
-    res.status(200).json(products);
 };
