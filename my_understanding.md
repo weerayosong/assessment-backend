@@ -5,7 +5,8 @@
 ## Submission Links
 
 **Loom Video (must be set to public — anyone with the link):**
-[paste your Loom video URL here]
+part1 - Intro
+[\[paste your Loom video URL here\]](https://www.loom.com/share/64bafcf10ada45baa829588e49a2be73)
 
 ---
 
