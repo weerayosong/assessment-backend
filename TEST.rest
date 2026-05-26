@@ -8,3 +8,21 @@ GET {{baseUrl}}/products?name=jedi
 
 ### 3. GET Product by ID
 GET {{baseUrl}}/products/1779778641624
+
+### 4. POST Add new Product (201)
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+    "name": "Sith Mask",
+    "price": 2500,
+    "quantity": 1
+}
+
+### 5. POST Add new Product (400)
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+    "name": "Droid Parts"
+}

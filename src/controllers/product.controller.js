@@ -28,3 +28,20 @@ export const getProductById = async (req, res, next) => {
         next(err);
     }
 };
+
+// POST: /products
+export const createProduct = (req, res) => {
+    const { name, price, quantity } = req.body;
+    if (!name || !price)
+        return res.status(400).json({ message: "name and price are required" });
+
+    const newProduct = {
+        id: String(Date.now()),
+        name,
+        price: Number(price),
+        quantity: Number(quantity || 1),
+    };
+
+    products.push(newProduct);
+    res.status(201).json({ message: "Product created", product: newProduct });
+};
