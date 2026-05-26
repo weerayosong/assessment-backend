@@ -45,3 +45,17 @@ export const createProduct = (req, res) => {
     products.push(newProduct);
     res.status(201).json({ message: "Product created", product: newProduct });
 };
+
+// PUT: /products/:id
+export const updateProduct = (req, res) => {
+    const product = products.find((p) => p.id === req.params.id);
+    if (!product) return res.status(404).json({ message: "Product not found" });
+
+    const { name, price, quantity } = req.body;
+
+    if (name) product.name = name;
+    if (price) product.price = Number(price);
+    if (quantity) product.quantity = Number(quantity);
+
+    res.status(200).json({ message: "Product updated", product });
+};
