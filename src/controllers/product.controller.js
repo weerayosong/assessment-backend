@@ -15,3 +15,16 @@ export const getProducts = async (req, res, next) => {
         next(err);
     }
 };
+
+// GET: /products/:id
+export const getProductById = async (req, res, next) => {
+    try {
+        const product = products.find((p) => p.id === req.params.id);
+        if (!product)
+            return res.status(404).json({ message: "Product not found" });
+
+        res.status(200).json(product);
+    } catch (err) {
+        next(err);
+    }
+};

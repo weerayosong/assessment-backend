@@ -3,5 +3,8 @@
 ### 1. GET All Products (req.query) ?name=undefined
 GET {{baseUrl}}/products
 
-### 1a. GET Product by name (req.query) ?name=light ,manda, jedi, etc.
+### 2. GET Product by name (req.query) ?name=light ,manda, jedi, etc.
 GET {{baseUrl}}/products?name=jedi
+
+### 3. GET Product by ID
+GET {{baseUrl}}/products/1779778641624
