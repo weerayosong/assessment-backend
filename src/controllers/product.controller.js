@@ -73,3 +73,17 @@ export const updateProduct = async (req, res, next) => {
         next(err);
     }
 };
+
+// DELETE: /products/:id
+export const deleteProduct = async (req, res, next) => {
+    try {
+        const index = products.findIndex((p) => p.id === req.params.id);
+        if (index === -1)
+            return res.status(404).json({ message: "Product not found" });
+
+        products.splice(index, 1);
+        res.status(200).json({ message: "Product deleted" });
+    } catch (err) {
+        next(err);
+    }
+};
