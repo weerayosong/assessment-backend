@@ -5,8 +5,13 @@
 ## Submission Links
 
 **Loom Video (must be set to public — anyone with the link):**
-part1 - Intro
-[\[paste your Loom video URL here\]](https://www.loom.com/share/64bafcf10ada45baa829588e49a2be73)
+
+- part1 - Intro
+  [vdo-part1](https://www.loom.com/share/64bafcf10ada45baa829588e49a2be73)
+- part2 - functionality
+  [vdo-part2](https://www.loom.com/share/ed9a06ea1cc64de885aa70d9b4dd43c4)
+- part3 - overall
+  [vdo-part3](https://www.loom.com/share/71f34a2749624172bd3eda210982979d)
 
 ---
 
@@ -42,7 +47,7 @@ _Your answer:_
 
 - body คือเนื้อในจดหมาย แบบเป็น JS Object เลย ทั้งก้อนใหญ่ๆเลย จะใช้ต้องเปิดเข้าไปเอง
 - params เห็นคำว่า params ให้มองไปดู address bar เลย, มันประมาณจ่าหน้าซองจดหมายน่ะ คล้าย body แต่มันไม่ได้เป็นก้อนทั้งหมด มันของตัวเดียวที่ถูกระบุไว้
-- query เจอคำนี้ที่ไหน มันคือ "?" "ขอสอบถามหน่อย?" eg.(ขอสอบถามหน่อย? อยากได้ชื่อสินค้าทั้งหมดของตารางสินค้าที่มีราคาน้อยกว่า10บาทจะได้อะไรมั่ง?) ใน JS express req ก็ดูบน address bar เลย แต่มันค่อนข้างมีความเป็นเงื่อนไขเลยต่างจาก paramsที่เจาะจง eg.(?name=light ประมาณว่า เงื่อนไข มีคำว่า light ใน req.name ด้วยนะ)
+- query เจอคำนี้ที่ไหน มันคือ "?" "ขอสอบถามหน่อย?" eg.(ขอสอบถามหน่อย? อยากได้ชื่อสินค้าทั้งหมดของตารางสินค้าที่มีราคาน้อยกว่า10บาทจะได้อะไรมั่ง? คุ้นๆใช่มั้ยนี่คือคิวรี่ของ sql นั่นเอง, จะที่ไหนถ้าเจอคำว่า query มันก็จะประมาณนี้แหละ "ขอสอบถามหน่อย?") ใน JS express req ก็ดูบน address bar เลย แต่มันค่อนข้างมีความเป็นเงื่อนไขเลยต่างจาก paramsที่เจาะจง eg.(?name=light ประมาณว่า เงื่อนไข มีคำว่า light ใน req.name ด้วยนะ)
 
 ---
 

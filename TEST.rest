@@ -7,7 +7,7 @@ GET {{baseUrl}}/products
 GET {{baseUrl}}/products?name=jedi
 
 ### 3. GET Product by ID
-GET {{baseUrl}}/products/1779778641624
+GET {{baseUrl}}/products/1779792068660
 
 ### 4. POST Add new Product (201)
 POST {{baseUrl}}/products
@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ### 6. PUT Update Product
-PUT {{baseUrl}}/products/1779781907849
+PUT {{baseUrl}}/products/1779792426180
 Content-Type: application/json
 
 {
@@ -36,4 +36,4 @@ Content-Type: application/json
 }
 
 ### 7. DELETE Product
-DELETE {{baseUrl}}/products/1779781907851
+DELETE {{baseUrl}}/products/1779792426184
